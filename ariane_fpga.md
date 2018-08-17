@@ -32,6 +32,8 @@ In the end I managed to synthesize ariane with these four changes:
 
 This design is obviously only synthesizable and not mappaple since it uses too many pins. This can be solved by a new top-level architecture around it similar to [pulpino](https://github.com/pulp-platform/pulpino) containing busses that are connected to certain peripherals and the DRAM.
 
-## New top-level Architecture
+## Rebase ontop of `ariane_next`
+
+__TODO__
 
 

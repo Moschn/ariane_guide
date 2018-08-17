@@ -4,7 +4,14 @@ Ariane is an open source 64bit in-order RISC-V core written in SystemVerilog tha
 
 For people interested in running linux ontop of ariane: The major roadblock is the atomic extension. Currently ariane is unable to run linux. A full implementation of the atomic extension is underway and will hopefully allow for ariane-based systems to boot linux.
 
-## The Core itself
+## The Core itself (based on the `ariane_next` branch)
+The `ariane_next` branch has a lot less small nits. The `AXI_BUS` module has been moved to the `src/` directory, and the `ariane_wrapped.sv` has been renamed to `ariane_testharness.sv` and moved to the `tb/` directory. 
+
+Also the core now incooperates more peripherals:
+  - The `CLINT` (Core-local Interrupt Controller) is a timer that supports the RISC-V priviledge sped v1.11. It requires a real time clock input (`rtc_i`) and it keeps state of the current time for the core.
+  - The debug interface is directly integrated and connected to the core itself 
+
+## The Core itself (based on the master branch)
 
 Most of the required source files reside in `src/`. The only exception is the `AXI_BUS` interface that is in `tb/agents/axi_if/axi_if.sv`. The `src/` directory also contains `ariane_wrapped.sv` which is part of the testbench and not the core itself. 
 
