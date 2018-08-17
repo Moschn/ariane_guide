@@ -13,6 +13,8 @@ Also the core now incooperates more peripherals:
 
 ## The Core itself (based on the master branch)
 
+**Warning: This will be outdates soon since it is based on the `master` branch. The new release will fix most of these nits!** 
+
 Most of the required source files reside in `src/`. The only exception is the `AXI_BUS` interface that is in `tb/agents/axi_if/axi_if.sv`. The `src/` directory also contains `ariane_wrapped.sv` which is part of the testbench and not the core itself. 
 
 The toplevel module of the core resides in `ariane.sv` and is called `ariane`. 
